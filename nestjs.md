@@ -131,3 +131,115 @@ NestJS has a rich ecosystem of packages and modules that can be used to extend t
 9. **@nestjs/microservices**: This package provides support for building microservices with NestJS, including features for message-based communication and event-driven architecture.
     
 10. **@nestjs/testing**: This package includes utilities and tools for writing unit and end-to-end tests for your NestJS application.
+
+
+*what is TYPEORM and how can i use  it *
+TypeORM is a popular Object-Relational Mapping (ORM) library for TypeScript and JavaScript. It allows you to interact with databases using TypeScript/JavaScript classes and objects, instead of writing raw SQL queries.
+
+Here's how you can use TypeORM with NestJS:
+
+1. **Install the required packages**:
+    
+    Copy
+    
+    ```
+    npm install @nestjs/typeorm typeorm pg
+    ```
+    
+    The `@nestjs/typeorm` package provides the integration between NestJS and TypeORM, and `typeorm` is the core TypeORM library. The `pg` package is an example of a database driver, in this case for PostgreSQL.
+    
+2. **Configure the TypeORM module in your NestJS application**:
+    
+     
+    
+    In your `app.module.ts` file, import the `TypeOrmModule` and add it to the `imports` array:
+    
+    typescript
+    
+    Copy
+    
+    ```
+    import { Module } from '@nestjs/common';
+    import { TypeOrmModule } from '@nestjs/typeorm';
+    
+    @Module({
+      imports: [
+        TypeOrmModule.forRoot({
+          type: 'postgres',
+          host: 'localhost',
+          port: 5432,
+          username: 'your-username',
+          password: 'your-password',
+          database: 'your-database',
+          entities: [__dirname + '/**/*.entity{.ts,.js}'],
+          synchronize: true,
+        }),
+      ],
+    })
+    export class AppModule {}
+    ```
+    
+    This configures the TypeORM connection based on the provided database credentials.
+    
+3. **Create an Entity**:
+    
+     
+    
+    In your NestJS application, create a new directory called `entities` and define an entity class, for example, `user.entity.ts`:
+    
+    typescript
+    
+    Copy
+    
+    ```
+    import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+    
+    @Entity()
+    export class User {
+      @PrimaryGeneratedColumn()
+      id: number;
+    
+      @Column()
+      name: string;
+    
+      @Column()
+      email: string;
+    }
+    ```
+    
+    This defines a `User` entity with three columns: `id`, `name`, and `email`.
+    
+4. **Use the Entity in a NestJS Service**:
+    
+     
+    
+    In your `users.service.ts` file, import the `User` entity and use the `TypeOrmModule` to interact with the database:
+    
+    typescript
+    
+    Copy
+    
+    ```
+    import { Injectable } from '@nestjs/common';
+    import { InjectRepository } from '@nestjs/typeorm';
+    import { Repository } from 'typeorm';
+    import { User } from './entities/user.entity';
+    
+    @Injectable()
+    export class UsersService {
+      constructor(
+        @InjectRepository(User)
+        private usersRepository: Repository<User>,
+      ) {}
+    
+      async findAll(): Promise<User[]> {
+        return this.usersRepository.find();
+      }
+    
+      async create(user: User): Promise<User> {
+        return this.usersRepository.save(user);
+      }
+    }
+    ```
+    
+    The `@InjectRepository` decorator injects the `Repository` for the `User` entity, which allows you to perform CRUD operations on the `User` table.

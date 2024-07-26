@@ -107,3 +107,27 @@ how can i implement nest js
     ```
     
     This will start your NestJS application on `http://localhost:3000`.
+
+*nestjs packages*
+
+NestJS has a rich ecosystem of packages and modules that can be used to extend the functionality of your application. Here are some of the most popular NestJS packages:
+
+1. **@nestjs/common**: This is the core package of NestJS, which provides common functionality such as decorators, utilities, and middleware.
+    
+2. **@nestjs/core**: This package contains the core functionality of the NestJS framework, including the dependency injection system and the application lifecycle management.
+    
+3. **@nestjs/platform-express**: This package integrates NestJS with the Express.js web framework, allowing you to use Express-specific features and middleware.
+    
+4. **@nestjs/terminus**: This package provides health check endpoints for your NestJS application, which can be used for monitoring and health checks.
+    
+5. **@nestjs/config**: This package simplifies the management of configuration variables in your NestJS application, allowing you to load and access environment variables.
+    
+6. **@nestjs/jwt**: This package provides a set of utilities for working with JSON Web Tokens (JWT) in your NestJS application, including authentication and authorization features.
+    
+7. **@nestjs/swagger**: This package generates a Swagger API documentation for your NestJS application, making it easier to document and test your API endpoints.
+    
+8. **@nestjs/typeorm**: This package integrates NestJS with the TypeORM library, which is a popular Object-Relational Mapping (ORM) tool for TypeScript and JavaScript.
+    
+9. **@nestjs/microservices**: This package provides support for building microservices with NestJS, including features for message-based communication and event-driven architecture.
+    
+10. **@nestjs/testing**: This package includes utilities and tools for writing unit and end-to-end tests for your NestJS application.

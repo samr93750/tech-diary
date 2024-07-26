@@ -243,3 +243,102 @@ Here's how you can use TypeORM with NestJS:
     ```
     
     The `@InjectRepository` decorator injects the `Repository` for the `User` entity, which allows you to perform CRUD operations on the `User` table.
+
+*what is nest js swagger?*
+NestJS Swagger is a package that provides integration between NestJS and Swagger, a popular tool for generating and documenting RESTful APIs. It allows you to automatically generate Swagger documentation for your NestJS application.
+
+Here's how you can use NestJS Swagger:
+
+1. **Install the required package**:
+    
+    Copy
+    
+    ```
+    npm install @nestjs/swagger swagger-ui-express
+    ```
+    
+    The `@nestjs/swagger` package provides the NestJS integration, and `swagger-ui-express` is used to serve the Swagger UI.
+    
+2. **Configure Swagger in your NestJS application**:
+    
+     
+    
+    In your `main.ts` file, import the necessary Swagger modules and configure the Swagger documentation:
+    
+    typescript
+    
+    Copy
+    
+    ```
+    import { NestFactory } from '@nestjs/core';
+    import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+    import { AppModule } from './app.module';
+    
+    async function bootstrap() {
+      const app = await NestFactory.create(AppModule);
+    
+      const config = new DocumentBuilder()
+        .setTitle('API Documentation')
+        .setDescription('The API description')
+        .setVersion('1.0')
+        .addTag('cats')
+        .build();
+      const document = SwaggerModule.createDocument(app, config);
+      SwaggerModule.setup('api', app, document);
+    
+      await app.listen(3000);
+    }
+    bootstrap();
+    ```
+    
+    This configures the Swagger documentation with a title, description, version, and a tag. The `SwaggerModule.setup` function sets up the Swagger UI, which will be available at the `/api` endpoint.
+    
+3. **Annotate your controllers and models with Swagger decorators**:
+    
+     
+    
+    In your NestJS controllers and models, use the Swagger decorators to provide information about your API:
+    
+    typescript
+    
+    Copy
+    
+    ```
+    import { Controller, Get, Post, Body } from '@nestjs/common';
+    import { ApiTags, ApiOperation, ApiProperty } from '@nestjs/swagger';
+    import { CreateCatDto } from './dto/create-cat.dto';
+    
+    class Cat {
+      @ApiProperty()
+      name: string;
+    
+      @ApiProperty()
+      age: number;
+    
+      @ApiProperty()
+      breed: string;
+    }
+    
+    @ApiTags('cats')
+    @Controller('cats')
+    export class CatsController {
+      @ApiOperation({ summary: 'Create a cat' })
+      @Post()
+      create(@Body() createCatDto: CreateCatDto) {
+        // implementation
+      }
+    
+      @ApiOperation({ summary: 'Find all cats' })
+      @Get()
+      findAll(): Cat[] {
+        // implementation
+      }
+    }
+    ```
+    
+    The `@ApiTags` decorator adds a tag to the controller, and the `@ApiOperation` decorator adds a summary to the API endpoint. The `@ApiProperty` decorator adds metadata to the `Cat` model.
+    
+
+After running your NestJS application, you can access the Swagger UI at the `/api` endpoint (e.g., `http://localhost:3000/api`). The Swagger UI will automatically generate documentation based on the information you provided in your controllers and models.
+
+NestJS Swagger provides a powerful way to document and test your API, making it easier for developers to understand and use your application's API.

@@ -108,3 +108,7 @@ F. WSL V2
 G. Termux - Android 
 - to use linux for android phones 
 - for running simple codes 
+
+step to 
+-installing kali linux on window
+ = 

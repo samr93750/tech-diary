@@ -109,6 +109,103 @@ G. Termux - Android
 - to use linux for android phones 
 - for running simple codes 
 
-step to 
--installing kali linux on window
- = 
+Day 3 kali linux 
+= 
+ 
+*over view of kali linux* 
+kali linux was known as Backtrack. 
+ - can use  genome and kde plasma
+1. Informaton gathering
+ - tools for gathering information 
+ - e.g nmap
+2. vulnerablity Analysis
+    - vulnerability means - weakness of a system. 
+    - tools for finding vulnerablity anaysis 
+    - nikto , nmap
+3. web application Analysis 
+- tools for finding vulnerablity and exploitation on website - burpsuite 
+4. Database Assessment
+- tools for finding vulnerablities and exploits on databases - sqlmap
+5. password Attacks 
+- tools for exploiting passwords for login, websites , application , windows - johnthe ripper , hashcat 
+6. wireless Attacks 
+-  tools for exploting wireless systems like wifi , bluetooth - aircrack, reaver 
+7. reverse Engineering 
+- tools for exploiting softwares ,  mobile applications and any binary files - apk tool , NASM shell
+8. Exploitation tools 
+- tools for metasploit , search exploit 
+9. sniffing and spoofing 
+- tools for listening or hijacking networks (manefnef)
+- weakness yemnfelgibachew tooloch 
+- e.g wireshark
+10. post exploitation
+- tools for maintaining access .used after exploiting a system.
+- access kagenyen behuala yemnkoybet 
+- backdoor
+- powersploit 
+11. Forensics 
+- Tools for doing researches and investigate a cyber attack
+- cyber attack menorun ena detailun investigate yemnaregbet. 
+- e.g autopsy , binwalk , foremost , galleta...
+12. Reporting tools 
+- tools for report preparation . after some forensic you will get data and you will write report and these tools will help you. 
+13. social engineering tools 
+- sewochn bematalel attack mareg 
+- the tools used for social engineering attacks. 
+14. system services 
+- buttons used to start some services. 
+- beef start and beef stop to start and stop services with out the permission of them.  
+15. usually used applications
+- softwares for some basic or specific purposes. 
+
+
+File managers in kali linux 
+ 1. dolphin - looks like window 
+ 2. thunar - mostly it is found on ubuntu and genome 
+ 3. nautilus - genome or ubuntu 
+to use different file manager in window we have to pay .
+
+some Linux Commands 
+= 
+the terminal have 5 parts 
+`(render@HunterMachine)-[~]`
+   - username - rexder 
+   - Hostname = HunterMachine
+   - current directory = PATH
+   - priviledge = $-(user), #-(root)
+   - command place = __
+   -Home directory is ~
+   -Local directory with .
+   -All directory *
+   
+- linux commands hve their own options and arguments 
+- what is command 
+   - are small programs that do one task well
+	   - format - `command --option argument
+	`
+- Ls = list directory 
+- ls -l  - lists with additional information like date....
+- ls -a  - all files including hidden file 
+- ls filename 
+- ls -R =>recursively list files in all folder
+
+- Cd to change directory
+- pwd = tells the current working directory 
+- echo = to write text and content of files with creating the file . 
+- to write `echo "hello" > hi.txt`- the greater than sign means save.
+- to append a text on existing file `echo "hello" >> hi.txt`
+- cat/head/tail/less = to display the content of a file . 
+- touch = to create a file with out writing any thing 
+- touch = to create multiple files together `touch abebe kebede`
+- mkdir= to create a directory. 
+- clear = to clear the terminal (or by ctrl+l)
+
+- rm = to remove files or folders 
+- rm -r = recursively remove from folder to file 
+- rm -i = delete with promt(ask)
+- rm -f = force delete 
+	- or we can use them in combination rm -rf  filename or directory.
+- cp = copy
+- mv = move 
+
+ 

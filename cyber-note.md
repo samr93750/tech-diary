@@ -207,5 +207,145 @@ the terminal have 5 parts
 	- or we can use them in combination rm -rf  filename or directory.
 - cp = copy
 - mv = move 
+- greg= used to  search a word in a file 
+- e.g `grep "abdisa" abdisa.txt`
+- grep -i =search file in case sensitive manner
+- grep -c = search file - count number
+- grep -l = search - displays file name
+- grep -R = search foldername -search text in folders recursively  eyegeba
+- grep -v = term file name to display with out name
+- grep -n "term " file - to display the term find number
 
- 
+- wc = word count 
+- wc 
+
+Day 4 linux
+= 
+ *More on linux*
+ Linux file Hierarchy 
+ VIM 
+ NANO
+ LINUX USER MANAGEMENT
+
+      1.LINUX FILE HIERARCHY
+ - linux have a special file system than windows.
+ - file system is a directory structure that the os uses.
+ system files 
+  - osachin yemitekemew filoch 
+  -   in window it is located in local disk c 
+  - in linux it is located in root directory 
+  - 
+  **1./(root) = is root directory in linux** 
+ every single file and directory starts from the root directory.
+ $= normal user
+ #=root user
+ the only root user has the right to access root directory 
+ - /root is the root user's home directory , which is not the same as /
+ - / is a root directory for user 
+ - /root is a root directory for root user
+ 2 . **bin =  Binary executables** 
+     - essential command binaries that need to be available in singleuser mode : for all user 
+     - computerachn lay run yemnadergew neger e.g cat,ls , cp ...
+3 . **/boot - Boot loader files**
+     - kernel initrd , vmlinux , grub files locted under /boot 
+     - files that contain that used to boot our computer 
+4  /dev = essential device files
+     - include terminal devices , usb ,or any device attached to the system.
+5 . /etc = et cetera 
+- files that contain configuration files required by all programs. 
+6 . /home = home directory 
+- linux lay create yemnaregachew useroch yemikemetubet bota new .
+- - ~ = /home/username(samrawit)
+7 . /lib = libraries essential for the binaries in /bin & /sbin
+8 . /media = mount points for removable media such as cd-roms 
+ - temporary mount directory for removable devices. 
+ - /media/cdrom for CDROM
+ - /media/floppy for floppy drives.
+10 . /mnt = temporarily mounted file
+- temporarily mount yemihonu filoch . lemsale flash sekten file keftan then flashun binineklew filun anagenyewm . 
+11 . /opt = optional application software package.
+ - contains add -on applications from individual vendors.
+ - add-on applications should be installed under either /opt or /opt sub-directory.
+ 12 . /sbin =essential system binaries 
+ - it also contain binary executables. but it is used by system administrator(sudo) :- e.g  - adduser = hulum sudo yemil kal eyetetekemn new yemiseruln.
+12 .tmp = temporary filoch 
+13 . /usr user utilies
+- useroch yetinyawn file metekem endemichilu yeminiwesenibetn new 
+- create laregnachew metekem yemichilutn filoch yeminaskemitibet
+
+**TEXT EDITOR**
+- programs that used for text processing 
+- linux command line text editors 
+     - VIM 
+     - NANO
+     - EMACS
+- linux Graphical Text editors 
+     - sublime
+     - vscode
+     - gedit
+     - pluma
+
+**VIM** 
+- it is very power full 
+- but at the same time it is cryptic 
+- it is hard to learn specially for windows users 
+- it has mainly two modes  
+    - command mode - where you can do commands 
+    - input mode - where you can write .
+    by default it is opened as command mode
+inside command mode we can 
+- save
+- save and quit 
+- force quit and save
+- undo 
+- execute bash commands 
+
+-save
+   `:w + enter
+-to quit
+   `:q +enter 
+-force quit
+    `:wq! + enter`
+-undo 
+    `:undo + enter` or `:u` 
+-extra command 
+    `:%!command` e.g :%!grep fun 
+    there is no space between them between :%!command
+    
+**NANO** 
+- simple text editor 
+- user friendly 
+- NANO file name
+- ctrl +s = save
+- alt +u = undo
+- alt + e = redo
+- ctrl +shift +c = copy 
+- ctrl +shift +x = cut 
+- ctrl +shift +v = paste
+- ctrl+x =exit 
+- ctrl +r = read
+
+LINUX USER MANAGEMENT 
+
+- every user has group 
+- users have their own files and applications 
+- to know our name on linux = who am i 
+- those users have power / privilege
+- on linux there are 2 kinds of users 
+     - root id =o 
+     - normal user (id start with 1-999)
+ - the root user have the power to do every thing on linux . 
+ - but if users want to have  root access they add sudo infront of command
+ - sudo (command)
+ - sudo = superuser do = used to pass permission denied.
+ - on linux to create users 
+     - useradd = simple 
+     - adduser = detailed
+     -useradd command 
+          - `sudo useradd username`
+    -adduser command 
+     - `sudo adduser username`
+     - user files are stored inside /etc/passwd
+     - user password are store in /etc/shadow
+     - when we create a user it creates a group with that name.
+     - 

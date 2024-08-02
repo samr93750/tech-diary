@@ -348,4 +348,138 @@ LINUX USER MANAGEMENT
      - user files are stored inside /etc/passwd
      - user password are store in /etc/shadow
      - when we create a user it creates a group with that name.
-     - 
+
+
+Day 5 Linux 
+=
+1. further on user management
+2. linux file ownership + permission
+3. software installation
+4. script installation
+5. package installation common errors
+
+1. some advanced user commands
+= to add user
+       - sudo useradd username
+-to change password of users 
+       -sudo passwd username 
+-to change user id 
+      -sudo usermod -u new_id username
+-to change users on terminal 
+       -`su username`
+-to check user's id 
+       -`id username`
+-to delete user 
+       -`sudo userdel -r username`
+-if create user using useradd then we can create a home directory for it using `sudo mkdir /home/caleb`
+
+sudoers file 
+- is a file linux and unix administrators use to allocate system right to system users 
+- the user we created doesn't have the power to use sudo as the original one bc it is not added in the sudoer file .
+
+2 . LINUX FILE PERMISSION 
+
+-every file on linux have their own owner and permission 
+-there are 5 parts 
+  - permission 
+  - owner
+  - date
+  - size 
+  - filename
+OWNERSHIP 
+= are owners of our file 
+- there are two types of owners
+     - user
+     - group 
+- to change the owner of a file `chown user:group filename`
+
+PERMISSION
+
+- read
+- write
+- execute
+-the folders and files are differ with d and - on the begining of the permission. 
+ d directory 
+-file
+
+user group other
+drwx rx      rwx
+
+user(u)
+group(g)
+other(o)
+all(a)
+
+e.g to give `sudo chmod +x abebe.txt` = for all users execute permission mestet
+`sudo chmod -r abebe.txt`= to remove read permission to all
+
+CHMOD command
+ - this command helps to change file permission
+ - those file permissions are read write and execute.
+ - each of the permisision have number
+ - + add permission - remove permission
+ - PARAMETERS IN SYMBOL 
+ - 1. chmod a+x = for all users add x permi
+ - 2. chod u+x = for user add x permissio
+ - 3. g+x = for group add permission
+ - 4.chmod o+x = for other
+ - 5.-x = remove from all
+ - chmode a+rwx,u-rw,g+x = to give permission with just one line. 
+   PARAMETERS IN NUMBER 
+   abc = user grouo other 
+   4=read
+   2=write 
+   1=excutable permission
+chmod 621 = 6=4+2=read and write
+777 = read write and executable for all owners 
+
+SPECIAL FILE PERMISSION
+
+1. SUID bits(s) - set user id bit - add 4 infront of out numeric value - 4000
+2. SGID bits(S)- set group id bit - add 2 infront of our numeric value - 2777
+3. sticky bits(t) - set other id bit - add 1 infront of our numeric value -1602 
+- they are permissions like the execute(x),but they will set the execute permission to the user who settled them 
+- enezih permissionoch ketesetu filun run mareg yeminichilew sudo ketetekemn bcha new .
+PACKAGE MANAGER ON LINUX 
+
+on linux to install softwares we can use package manager 
+- e.g apt packman,pkg
+- for kali we will use debian package manager 
+- on debian the package manager is called "APT" also there is called 
+  "dpkg"
+"http.kali.org/kali" =to get packages in linux 
+
+ADVANCED PACKAGE TOOL (APT)
+
+- apt is a free software user interface that work with an online server to handle the installation and removal of software on debian and debian based linux distributions. used for online and offline purpose. 
+- the old "apt" used as "apt-get"
+- `sudo apt update`
+- `sudo apt search <software name`
+- `sudo apt install <softwarename>`
+- `sudo apt remove <softwarename`>
+- `sudo apt upgrade`
+- `sudo apt purge <softwarename>
+PACKAGE DEPENDENCIES 
+
+- A software can be built based on another program called module.
+- do a program to work properly the dependencies will 
+
+DPKG/Debian package manager/
+
+- is offline package managing manager 
+- packages on debian have an extension ".deb"
+- syntax 
+   - `sudo dpkg -i <package name> =download
+   - `sudo dpkg -r <package name> = remove
+  -  `sudo dpkg -p <packge name>`    = to remove package with all its dependencies 
+
+exercise
+1.update your system repository 
+2.search for package called cmatrix
+3.install "cmatrix"
+4.remove "cmatrix"
+answer
+sudo apt update
+sudo apt search cmatrix
+sudo apt install cmatrix 
+sudo apt purge cmatrix 

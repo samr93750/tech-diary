@@ -483,3 +483,13 @@ sudo apt update
 sudo apt search cmatrix
 sudo apt install cmatrix 
 sudo apt purge cmatrix 
+
+# some linux commands
+
+1. awk  " " filename =read the file 
+2. awk {print $1} file name =read only the first column 
+3. awk "/manager/ {prinit $0}" filename = 
+4. awk "{print NR,$0}" filename ... read it with giving line number 
+5. awk "NR==3 {print NR,$0}"  filename .... read from line number 3
+6. if the data in the file is not separated with space like if they are separated with : 
+      `awk -F ":" "{print $1"`

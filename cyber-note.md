@@ -493,3 +493,8 @@ sudo apt purge cmatrix
 5. awk "NR==3 {print NR,$0}"  filename .... read from line number 3
 6. if the data in the file is not separated with space like if they are separated with : 
       `awk -F ":" "{print $1"`
+
+
+Day 6
+=
+`sudo mkdir home/username`= 

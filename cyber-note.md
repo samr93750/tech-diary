@@ -497,4 +497,66 @@ sudo apt purge cmatrix
 
 Day 6
 =
-`sudo mkdir home/username`= 
+`sudo mkdir home/username`= doesn't create home directory for users also it does not create the user file.
+
+sudo mkhomedir_helper username = create home directory folder with user
+
+- SCRIPT INSTALLATION
+- ERRORS ON PACKAGE MANAGERS 
+- HELP ON LINUX 
+- LINUX SERVICES
+- SYMBOLIC LINKING
+- ALIAS
+- TMUX
+- Wget
+- FIND
+
+**1 . SCRIPT INSTALLATION**
+
+- some hacking tools are developed by some people and those people make it open source that means we can get those scripts/programs from github.
+- then we can clone and use it .
+- scripts are made with scripting languages(programming ) like python,bash,go....
+- so when we use these programming languages to do tasks there is something called modules/libraries these are needed to run the script as the dependencies 
+- e.g python=to install python modules we use `pip install <module name>` - pip install -r requirements.txt
+- go = to install go modules - `go install <module name>
+- ruby = to install ruby modules - `gem install` <module name>
+python installation 
+   -  if pip is not found there will be an error like ``command not found ....1``
+
+H1 GO PACKAGE INSTALLATION
+
+- go script are scripts made with go(golang programming language)
+- there are 2 installation 
+ - old and new version 
+ - for old `go get link`
+ - for new versio 
+ - downloading the package `go install link`
+ - moving the file to /usr/bin (the default download place is /home/username/go/bin `sudo mv filename_/usr/bin`
+
+2 . ERRORS WE MAY HAVE ENCOUNTER
+
+- don't close apt while installation 
+- repository errors , if this happened you can fix it using 
+  - `sudo apt edit-sources`
+-for those kinds of error what you have to do is google/youtube 
+
+2.HELP ON LINUX
+
+- man (manual ) 
+    - this give us the whole manual and instruction of a tool or command .
+         - man <your command>
+         - e.g man <awk>
+ - help
+      -some commands have help option = it tels us about option
+        - <your command> -h
+        - <your command> -help
+        -  <your command> --help
+3. LINUX PROCESSES AND SERVICES 
+
+- as we interact with linux we create numbered instances of running programed called "processes"
+- to get the processes 
+- `pd [options]`
+- more commands 
+- ps=for process running on my shell
+- ps -A = view all running process
+- ps -u username = view users process

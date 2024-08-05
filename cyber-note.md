@@ -560,3 +560,100 @@ H1 GO PACKAGE INSTALLATION
 - ps=for process running on my shell
 - ps -A = view all running process
 - ps -u username = view users process
+- PID = process id 
+- to stop a process 
+- kill [option] [pid]
+-kill -19 PID  = stop the process  but not totally stopped
+- kill -19 PID = to resume the process we stopped
+- kill -9 PID = to stop a process immediately 
+- there are around 31 options . 
+- but this is time wasting process 
+- for this purpose we have the tool called top installed on linux 
+- but to make this fun we will use "htop" , it is colourful and more enhnced!
+- top is better than ps and htop is better than top
+- f3 search f9 kill
+
+FOREGROUND AND BACKGROUND
+
+-fore ground one process like update we have to waited them to complete with out doing any thing. 
+-use & operator to run programs in the "background " or press ^z 
+- to get background process to foreground process 
+- USE `fg `
+- to stop a process going inside your shell just press ^c
+
+# **Null device**
+(in some case it is similar to recyclebin)
+=redirects output to nowhere
+- if we want to ignore out put, you can send it to the null device , /dev/null
+- null device is a special file that throws away whatever is fed to it.
+- you may hear peope refer to it as the bit bucket. 
+- if you don't want to see errors on your screen and you don't want to save them to a file you can redirect them to /dev/null
+- on shell output there are 2 things.
+= STDERR =2
+=STDOUT =1
+- to redirect the error from a command result we o 
+- command 2> file name 
+- to redirect the error-free out put 
+- command 1> filename
+- so if we redirect our commands out put to /dev/null we will get error free result 
+- command 2? /dev/null
+
+# #symbolic link
+
+- is the same as window shortcut 
+- is a process of creating a linked shortcut form of file to some pre-existed file or folder 
+- e.g you can create program is some file and to create a shortcut format of that file you will use symbolic linkingalso if a file path is too long we can create a symbolic linking 
+- symbolic linked files shows "l" in listing of ls command also therre will be a -> to show the linked file 
+- syntax ln -s source_filePATH myfilename
+
+
+ALIAS 
+
+- it is for commands 
+- regim command be achir kal mewekel
+- used to give a name to some bunch of commands.
+- but it doesn't work after we closed the terminal
+- if we want to make it work you will add it to your shell config file.
+- alias rex = 'ls -la --color'
+- alias rex = "cd samrawit cd amare"
+- for bash Bash =  nano ~/.bashrc
+
+TMUX = terminal multiplexer 
+
+tmux is used to classify our terminal work.
+-to create config file type
+     -nano.tmux.conf
+- to split horizontally 
+- ^A then o 
+- to split vertically 
+- ^A then e 
+- to exit
+- ^A then x or 
+- just type exit
+- to creat tab 
+- ^A then c 
+- to rename the tab
+- ^ then comma
+- to switch tabs
+- ^A then numbers
+- to switch partitions 
+- ^A then arrow 
+
+Wget
+
+- is a tool used to download files from websites/servers other than github
+- syntax
+- wget [options] link
+- link= the url of the websites 
+
+
+FIND
+
+- on terminal if we want to search for files/folders/musics/videos , we can use find command.
+- it is very essential tool 
+- syntax: find [searchpath ] [option] [search word]
+- more commands
+-find / -name "linux"
+-find /home-perm 777
+-find -type f | find-type d (directory malet new)
+

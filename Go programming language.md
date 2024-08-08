@@ -86,6 +86,28 @@ Floating point Types
 
 Arrays and Slices 
 
-- are data structures to store collection of elements in a single variable.
+
+- Arrays are data structures to store collection of elements in a single variable.
 - var variable_name [size] variable type
   - only the same data type can be stored 
+  - array type is the size of array and the data type of the array
+
+Slices
+
+- what if we don't know the size when creating it?
+- slice is an abstraction of an array
+- are more flexible and powerful :
+- variable-length or get an sub-array of its own.
+- are also index based and have a size, but is resized when needed
+Loops 
+
+- provides various control structures to control the application flow
+- a loop statement allows us to execute code multiple times in a loop
+- loops are simplified in Go
+- you only have for loop
+for loop with different types
+ - 1. infinite for loop
+for{----}
+- 2. for each loop 
+- range iterates over elements for different data structures (so not only arrays and slices)
+- for arrays and slices , range provides the index and values for each element.

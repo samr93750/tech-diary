@@ -161,4 +161,54 @@ city:= "london"
         //something
 
     }
-   
+### Functions
+- Encapsulate code into own container (=function). Which logically belong together!
+- like a variable name we should give a function a descriptive name
+- function greetUser{
+- fmt.println("welcome...")
+- }
+- call a function by its name , when ever you want to execute this block of code
+- greetUser()
+- every program in go has at least one function , which is the main() function.
+- function is only executedd , when called!
+- you can call a functions as many times you want 
+- so a function is also used to reduce code duplication 
+- informations can be passed in to functions as parameters.
+- parameteres are also called arguments.
+
+Return values
+
+- A function can return data as a result
+- so a function can take an input and return an output
+- go can return multiple values in a function.
+
+Package level variables
+ - Defined at the top outside all functions 
+ - it can be accessed inside any functions 
+- best practice : define variable as "local" as possible
+
+	 local variables 
+- define inside a function or a block.
+- they can be accessed only inside that function or block of code.
+#### Go packages
+- go programs are organized in to packages.
+- a package is a collection of Go files.
+- variables and functions defined outside any function can be accessed in all other files within the same package.
+### Exporting a variable 
+- make it available for all packages in the app.
+- to export just capitalize the first letter of the function
+
+### scope of variables
+
+1. Local
+- declaration within function 
+- can be used only within that function
+- delclaration within block (for,if else)
+- can only be used in side that block
+2. package scope
+- declaration outside all functions
+- can be used every where in the same package
+3. global
+- declaration outside all functions and uppercase first letter 
+- can be used everywhere across all packages 
+

@@ -111,3 +111,54 @@ for{----}
 - 2. for each loop 
 - range iterates over elements for different data structures (so not only arrays and slices)
 - for arrays and slices , range provides the index and values for each element.
+### IF Else statement
+if something=something{
+do this...
+}
+
+Break statement
+   - terminates for loop
+   - and continues with the code right after the for loop ( inout case we don't have any code)
+#### continue
+
+skip the current process and skip to the next iteration
+
+#### elseif statement
+
+we can have unlimited else if statement.
+
+End of a loop 
+ -- a loop continues as long as  a condition is true
+ --- we can handle that using for loop condition
+infinite Loop
+-- infinite loop = a loop that repeats endlessly, as the condition is always true.
+
+### user input validation
+ - handling bad user inputs. 
+len  returns the length of a variables according to its type. 
+
+### switch statement
+- is best case for if else statement.
+e.g
+city:= "london"
+
+    switch city{
+
+    case "newyork":
+
+        //something
+
+    case "singapore":
+
+        //something
+
+    case "berlin":
+
+        //something
+
+    case "london":
+
+        //something
+
+    }
+   

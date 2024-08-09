@@ -10,9 +10,10 @@ Day 1
 # compilation
 - from human readable form to machine readable form (binary)
 - it can be run every where
-variables
+
+-variables
 -bools
-string 
+-string 
 
 Go 
 - built in multi concurrency mechanism
@@ -211,4 +212,10 @@ Package level variables
 3. global
 - declaration outside all functions and uppercase first letter 
 - can be used everywhere across all packages 
+
+Maps 
+- are unique keys to values.
+- you can retrieve the value byb using its key later.
+- all keys have the same data type 
+- all values have the same data type
 

@@ -134,4 +134,12 @@ USER INPUT HANDLING
  are just white space which python uses for some of its function. if there is no proper indentation error then you are doomed
 ### if else conditions
 if .... else
+
+elif= else if
+
+nested if = means using if statement inside an if statement
+if a=0:
+ if b>4:
+  print "hi"
+
  

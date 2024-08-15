@@ -218,4 +218,18 @@ Maps
 - you can retrieve the value byb using its key later.
 - all keys have the same data type 
 - all values have the same data type
+- //create a map for a user
+
+    var userData= make(map[string]string)
+
+    userData["firstName"]=firstName
+
+    userData["hostname"]=lastName
+
+    userData["email"]=email
+
+#### structs
+
+
+
 

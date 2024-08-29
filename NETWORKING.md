@@ -159,4 +159,186 @@ why do we need ipv6
 - lack of ipv4(poor country)
 NAT(network address translation)
 - it translates public id to private id. 
+- this allows devices in a private network to access the internet while conserving public IP addresses.
+- provides a basic level of security by hiding internal ip addresses 
+NETWORK DIVISION
+- We can use some techniques to segment and classify our networks.
+- 1. VLAN(virtual local area)
+- this means creating different virtual LAN'S based on 1 IP
+-  be and ip yemetawn network wede tinanish local area networkoch mekefafel.
+- 2. subnetting= this is segmenting the IP address based on subnet mask
+
+- MAC Address(Media Access Control)
+- kutru yemimetaw computerun keseraw manufacturer network adapter new.network adapter malet hardware device new that helps us to have a connection (our wifi adapter)
+- mac is alpha numeric with 2 parts : 1.organization unique id
+- 2. universally administered address.
+- 48 bit data
+- have 6 octets.
+- use hex(Alpha numeric)
+- mac is alpha numeric with 2 parts : 1.organization unique id
+- 2. universally administered address.
+- ==00|1A|3F==|F1|4C|C6
+- organizationally unique identifier 
+- assigned by the first 24 bits of the address.
+- e.g 00-15-C5 corresponds to "Del inc"
+- remainder of mac address
+- allocated by manufacturer
+- e.g 49-04-A9 for my ethernet card.
+
+OSI (open system interconnection) reference model
+- layeroch andu technology kelelaw yemigbabubet
+- osi reference model = internationally standardized network architecture.
+- specified in ISO 7498.
+- It is an idea model to show the way of network work.
+- model has 7 layers.
+- it shows how data transfers between 2 hosts or servers.
+this layers are 7
+- layer7 application layer
+- layer 6 presentation layer 
+- layer 5 session layer
+- layer 4 transport layer
+- layer 3 network layer
+- layer 2 data link layer
+- layer 1 physical layer
+layer 1-4 relate to communications technology
+layer 5-7 relate to user applications.
+the sequence differ when sender and receiver use it.
+### network protocols
+are rules and conventions that govern how data is transmited and receive over a network. they define the methods for communication between network devices .
+
+### layer 7 : Application layer 
+services that has direct access to soft ware applications for file transfers, database acess and main , browsers
+your data is DATA
+PROTOCOLS : HTTP , FTP....
+
+### layer 6 : presentation layer
+related to representation of transmitted data 
+translates different data representations from the application layer into uniform standard format 
+providing services for secure efficient data transmission 
+e.g data encryption and data compression.
+your data is data
+PROTOCOLS : SSL 
+zip madreg, size masanes ....
+
+### layer 5 : session layer
+it's like menged mezergat for the transmission
+allows 2 computers on different computers to establish use and end a session for file transfer, remote login etc.
+establish dialog control 
+regulates which side transmits , plus when and how long it transmits.
+performs token management and synchronization.
+your data is DATA.
+protocols : RPC , NETBIOS
+
+### layer 4: transport layer 
+manages transmission packets.
+from the senders angle :repackages long messages when necessary into small packers for transmission 
+from the receiver angle: reassembles packets in correct order to get the original message. 
+
+Handles error recognition and recovery . 
+transport layer at receiving and acknowledges packet delivery 
+resend missing packet
+your datais SEGMENTS
+Protocols : TCP , UDP 
+
+### layer 3 : network layer
+manages addressing / routing of data within the ip range
+addresses messages and translates logical addresses and names into physial addresses
+determines the route from the source to the destination 
+manages traffic problems , such as switching , routing and controlling the congestion of data packets. 
+- leyetnyaw computer endemiders yemiwesenbet
+your data is PACKETS.
+PROTOCOLS : ICMP , ARP , NAT , IP
+
+
+### layer 2: data link layer
+mac address meletef
+packages raw bits from the physical layer into frames ( logical , structured packets for data) [receiver]
+provides reliable transmission of frames
+it waits for acknowledgment from the receiving computer.
+retransmitts frames for which acknowledgment not receives.
+your data is FRAMES.
+PROTOCOLs : PPP, NDP , CDP 
+
+### LAYER 1:  PHYSICAL LAYER
+finally transmit yemideregew neger kene computer yiwetal interms of bits
+transmits bits from one computer to another
+regulates the transmision of a stream of bits over a physical medium .
+defines how the cable is attached to the network adapter and what transmission technique is used to send data over the cable deals with issues like 
+- the definition of 0 and 1 e.g how many volts represent a 1 and how long a bit lasts?
+- how many pins a connector has and what the function of each pin is? 
+- your data is bits.
+- PROTOCOLS / DEVICES : RS-449.
+
+
+### TCP AND UDP 
+
+TCP (transmission control protocol)
+huletum merejan korarto lemasgebat.
+gn TCP mnm loss yelewm every data betikikil yigebal udp lay data loss linor yichilal 
+TCP 
+- reliable
+- connection oriented protocol 
+- it establish user receiver connection
+- uses 3 way handshake 
+UDP 
+user datagram protocol
+connectionless
+not reliable.
+
+TCP/IP Model
+
+- it is a reference model like osi model 
+- devisochun lemagbabat ke osi yeteshale new
+ - instead of 7 layer 5 layer new yalachew 
+ - Application layer
+ - Transport layer
+ - Network layer
+ - network access layer 
+
+### Networking tools
+ - hardware devices to connect different computers 
+ - layer 7 firewall
+ - layer 6 no devices
+ - layer 5 no devices
+ - layer 4 no devices
+ - layer 3 routers, layer 3 switch
+ - layer 2 switch, bridge
+ - layer1 hub, cables, repeater
+
+layer 1 : HUB
+it is a device used to  ke hulet belay yehonu computerochn lemagenanyet
+it broadcasts data to all devices connected to it. 
+
+layer1: repeater
+to amplify the spee of internet in long route
+
+layer 1 : network cables.
+used to connect 2 different network devices or computers 
+there are many cables type
+1. coaxial cable
+- primary used for cable television internet connections and other types of data transmission over long distance
+2. twisted pair cable
+-  internet bet
+- used in telecommunication and computer networks including ethernet networks 
+- over long distance they are more susceptibleto signal degradation compared to coaxial and fibre optic
+3. fibre optics cable
+- have high speed data transmission especially internet backbones
+- long distance telecommunication network
+- termus new so tinikake yifelgal
+- more expensive and delicate compared to others 
+- installation requires specialized skills
+layer 2 : switches
+operates at 2 layer to connect devices withing the same network 
+it uses mac address to forwrad data
+it sends data for specific sew
+
+layer 3 : routers
+use ip address
+it routes data between different network by using ip department
+
+layer 1 : firewall
+- firewall is a network security device that monitors incoming and outgoing 
+- every os have firewall built-in.
+- it has a form hard ware and software
+ 
 

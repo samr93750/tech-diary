@@ -280,10 +280,12 @@ TCP
 - connection oriented protocol 
 - it establish user receiver connection
 - uses 3 way handshake 
+- slow
 UDP 
 user datagram protocol
 connectionless
 not reliable.
+fast
 
 TCP/IP Model
 

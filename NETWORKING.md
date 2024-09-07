@@ -312,7 +312,7 @@ it is a device used to  ke hulet belay yehonu computerochn lemagenanyet
 it broadcasts data to all devices connected to it. 
 
 layer1: repeater
-to amplify the spee of internet in long route
+to amplify the speed of internet in long route
 
 layer 1 : network cables.
 used to connect 2 different network devices or computers 
@@ -330,8 +330,8 @@ there are many cables type
 - more expensive and delicate compared to others 
 - installation requires specialized skills
 layer 2 : switches
-operates at 2 layer to connect devices withing the same network 
-it uses mac address to forwrad data
+operates at 2 layer to connect devices within the same network 
+it uses mac address to forward data
 it sends data for specific sew
 
 layer 3 : routers

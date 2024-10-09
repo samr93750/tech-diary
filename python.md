@@ -1,4 +1,4 @@
-= 
+what is actually python ? = 
 Logical Error
  - are errors that occur at run time (after passing the syntax test) are called exceptions or logical errors 
  - e.g try to call an index that is greater than the list have causes(Index Error) 
